@@ -1,0 +1,49 @@
+<section id="about" class="about__main-container">
+    <article class="about__main-card">
+      <h1 class="about__main-title">SOBRE MIM</h1>
+      <div class="about__briefcase">
+        Aqui descreverei sobre minhas experiências, formações e qualificações ao
+        decorrer da minha vida profissional, juntamente com minhas ambições para o futuro.
+      </div>
+    </article>
+    <article class="about__content">
+      <div class="about__main-description">
+        <h1 class="about__subtitle">Quem sou eu</h1>
+        <span class="about__description"
+          ><p class="description__p">
+            Sou um estudante de Análise e desenvolvimento de sistemas, aprendendo
+            dia após dia sobre esse mundo maravilhoso da tecnologia em específico
+            o framework Angular e Apex (Salesforce), que já a algum tempo almejo
+            mergulhar de cabeça.
+          </p>
+          <p class="description__p">
+            Bacharel em ciências contábeis, atuei por cerca de onze anos na área,
+            minha última posição foi como Management Accountant em uma
+            multinacional do ramo da construção civil, desenvolvi rotinas e
+            maximizei a performance do departamento de controladoria a qual era o
+            responsável, confeccionando KPI (key perfomance indicators),
+            realizando validações, garantindo o compliance e auxiliando nas
+            tomadas de decisões por parte do conselho de Diretores e CFO.
+          </p>
+          <p class="description__p">
+            Estou aberto a novas oportunidades de trabalho, neste momento estou buscando
+            minha primeira experiência nessa transição de carreira, abaixo estão
+            algumas de minhas redes sociais.
+          </p>
+        </span>
+        <div class="about__socials">
+          <span class="about__socials-text">REDES SOCIAIS</span>
+          <app-socials></app-socials>
+        </div>
+      </div>
+      <div class="about__line">
+        <p class="about__line-text"></p>
+      </div>
+      <div class="about__formations">
+        <app-education
+          *ngFor="let education of educationData"
+          [educationData]="education"
+        ></app-education>
+      </div>
+    </article>
+  </section>

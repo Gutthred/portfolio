@@ -1,0 +1,29 @@
+<div
+  class="project__card"
+  id="{{ projectItem.id }}"
+>
+  <figure class="project__card-img">
+    <img
+      class="card-img"
+      src="assets/header-logo-primary.png"
+      alt="Teste de imagem"
+    />
+  </figure>
+  <div class="card__title-description">
+    <span class="card__title">{{ projectItem.name | uppercase }}</span>
+    <span class="card__description">{{ projectItem.description }}</span>
+  </div>
+  <div class="card__tags">
+    <span class="card__tag" *ngFor="let t of projectItem.topics">{{
+      t | uppercase
+    }}</span>
+  </div>
+  <div class="card__buttons">
+    <span class="card__button"
+      ><a href="{{ projectItem.html_url }}">SOURCE</a></span
+    >
+    <span *ngIf="projectItem.homepage !== null && projectItem.homepage !== '' " class="card__button"
+      ><a href="{{ projectItem.homepage }}">LIVE</a></span
+    >
+  </div>
+</div>

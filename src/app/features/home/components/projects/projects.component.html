@@ -1,0 +1,16 @@
+<section id="projects" class="projects__container">
+    <div class="projects__main-container">
+      <h1 class="project__main-title">PROJETOS</h1>
+  
+      <span class="project__description"
+        >Esses são de meus projetos pessoais onde aplico o conhecimento obtido, projetos estes que estão listados em meu repositório no github.</span
+      >
+    </div>
+    <div class="projects__line">
+      <p class="projects__line-text"></p>
+    </div>
+    <div class="projects__cards">
+      <app-project-item *ngFor="let p of repository" [projectItem]="p"></app-project-item>
+    </div>
+  </section>
+  
