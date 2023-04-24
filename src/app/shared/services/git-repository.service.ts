@@ -13,4 +13,9 @@ export class GitRepositoryService {
   getRepos(){
     return lastValueFrom(this.httpClient.get<GitRepository[]>('https://api.github.com/users/gutthred/repos'));
   }
+
+  getRepoById(n: number){
+    return lastValueFrom(this.httpClient.get<GitRepository[]>(`https://api.github.com/repositories/${n}`))
+  }
+
 }

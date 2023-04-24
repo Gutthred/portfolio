@@ -1,0 +1,19 @@
+<app-header></app-header>
+<app-nav-bar></app-nav-bar>
+<section class="project__main-section">
+  <div class="project__title-description">
+    <span class="project-title">Projetos</span>
+    <span class="project-description"
+      >Estes são os meus projetos salvos no repositório do Github, alguns
+      projetos estão em produção, caso queira ver o funcionamento clique no
+      botão <b>LIVE</b> , agora se preferir visualizar o código fonte, clique no
+      botão <b>SOURCE</b> .</span
+    >
+  </div>
+  <app-projects-list
+    *ngFor="let p of repository"
+    [projectItem]="p"
+  ></app-projects-list>
+</section>
+
+<app-footer></app-footer>

@@ -1,0 +1,42 @@
+.project__main-section {
+  display: flex;
+  flex-direction: column;
+  margin: 1.5rem 0rem;
+}
+
+b{
+    font-size: small;
+    font-weight: 500;
+    background-color: var(--primary-color-rgb);
+    padding: 0.3rem 0.5rem;
+    border-radius: 8px;
+}
+
+.project__title-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem;
+  font-weight: 500;
+}
+
+.project-title{
+    font-size: x-large;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+
+}
+
+.project-description{
+    line-height: 1.7rem;
+
+}
+
+@media screen and (min-width: 768px) {
+
+    .project__main-section{
+        margin-top: 80px;
+    }
+    
+}

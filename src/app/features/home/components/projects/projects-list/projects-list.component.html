@@ -1,0 +1,23 @@
+<section class="projectList__main-container">
+  <div class="projectList__card" id="{{ projectItem.id }}">
+    <div class="projectList__title-tags">
+      <div class="card-title">{{ projectItem.name | uppercase }}</div>
+      <div class="card__tags">
+        <span class="card__tag" *ngFor="let t of projectItem.topics">{{
+          t | uppercase
+        }}</span>
+      </div>
+    </div>
+
+    <div class="card__buttons">
+      <span class="card__button"
+        ><a href="{{ projectItem.html_url }}">SOURCE</a></span
+      >
+      <span
+        *ngIf="!!projectItem.homepage && projectItem.homepage !== ''"
+        class="card__button"
+        ><a href="{{ projectItem.homepage }}">LIVE</a></span
+      >
+    </div>
+  </div>
+</section>

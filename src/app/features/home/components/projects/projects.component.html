@@ -3,14 +3,20 @@
       <h1 class="project__main-title">PROJETOS</h1>
   
       <span class="project__description"
-        >Esses são de meus projetos pessoais onde aplico o conhecimento obtido, projetos estes que estão listados em meu repositório no github.</span
+        >Estão listados aqui, alguns dos projetos pessoais onde aplico o conhecimento obtido, para acessar os demais clique no botão abaixo.</span
       >
+      <span [routerLink]="['/projects']" class="project__button">VEJA MAIS</span>
     </div>
     <div class="projects__line">
       <p class="projects__line-text"></p>
     </div>
-    <div class="projects__cards">
-      <app-project-item *ngFor="let p of repository" [projectItem]="p"></app-project-item>
+    <div class="projects__pinned-card">
+      <span class="projects__subtitle">Em destaque:</span>
+      <div class="projects__cards">
+        <ng-container ></ng-container>
+        <app-project-item *ngFor="let p of repository" [projectItem]="p"></app-project-item>
+      </div>
     </div>
+    
   </section>
   
